@@ -84,7 +84,7 @@ function Notes() {
 
   return (
     <div style={{ minHeight: '100vh', padding: '40px 20px', background: '#f5f7fa' }}>
-      {/* Header */}
+      
       <div style={{ maxWidth: 1400, margin: '0 auto 40px' }}>
         <div style={{ background: 'white', borderRadius: 20, padding: '40px', boxShadow: '0 10px 40px rgba(0,0,0,0.1)', textAlign: 'center' }}>
           <h1 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#667eea', marginBottom: 10 }}>
@@ -96,17 +96,17 @@ function Notes() {
 
       <div style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 30 }}>
         
-        {/* Add Resource Form */}
+        
         <div style={{ background: 'white', borderRadius: 20, padding: 30, boxShadow: '0 10px 40px rgba(0,0,0,0.1)', height: 'fit-content' }}>
           <h3 style={{ color: '#667eea', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: 20, display: 'flex', alignItems: 'center', gap: 10 }}>
-            <Plus size={24} /> Add New Resource
+            Add New Resource
           </h3>
 
           <div style={{ marginBottom: 20 }}>
-            <label style={{ display: 'block', fontWeight: 600, marginBottom: 8, color: '#333' }}>Resource Title *</label>
+            <label style={{ display: 'block', fontWeight: 600, marginBottom: 8, color: '#333' }}>Resource Title </label>
             <input
               type="text"
-              placeholder="e.g., Business English Vocabulary"
+              placeholder=""
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               style={{
@@ -122,9 +122,9 @@ function Notes() {
           </div>
 
           <div style={{ marginBottom: 20 }}>
-            <label style={{ display: 'block', fontWeight: 600, marginBottom: 8, color: '#333' }}>Description *</label>
+            <label style={{ display: 'block', fontWeight: 600, marginBottom: 8, color: '#333' }}>Description </label>
             <textarea
-              placeholder="Describe your resource..."
+              placeholder=""
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={4}
@@ -164,7 +164,7 @@ function Notes() {
           </div>
 
           <div style={{ marginBottom: 20 }}>
-            <label style={{ display: 'block', fontWeight: 600, marginBottom: 8, color: '#333' }}>Level *</label>
+            <label style={{ display: 'block', fontWeight: 600, marginBottom: 8, color: '#333' }}>Level </label>
             <div style={{ display: 'flex', gap: 10 }}>
               {levels.map(lvl => (
                 <button
