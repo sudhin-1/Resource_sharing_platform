@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import CardActions from '@mui/material/CardActions';
 import Card from '@mui/material/Card';
@@ -6,6 +6,8 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom'
+
+
 
 const bull = (
     <Box
@@ -20,17 +22,17 @@ const card = (
     <React.Fragment>
         <CardContent className='rounded-5'>
             
-            <Typography className='text-center' variant="h5" component="div">
-                Note-sharing
+            <Typography className='text-center text-decoration-underline' variant="h5" component="div">
+                Admin-portal
             </Typography>
             <Typography className='mt-4 text-center' variant="body2">
-                Share your class notes or access others’—learn faster together.
+                Resource-sharing moderator, where the admin reviews user-submitted resource requests and either approves or rejects them.
                 <br />
                 
             </Typography>
         </CardContent>
         <CardActions>
-            <Link to = {"/notes"}><Button size="small">Learn More</Button></Link>
+            <Link to = {"/admin"}><Button size="small">Learn More</Button></Link>
         </CardActions>
     </React.Fragment>
 );
@@ -39,17 +41,16 @@ const card1 = (
     <React.Fragment>
         <CardContent className='rounded-5'>
             
-            <Typography className='text-center' variant="h5" component="div">
-                Live-session Evaluation
+            <Typography className='text-center text-decoration-underline' variant="h5" component="div">
+                User-portal
             </Typography>
             <Typography className='mt-4 text-center' variant="body2">
-                Join live study sessions and get instant feedback from peers and mentors.
-                <br />
+                Resource request platform, allowing users to submit titles and descriptions of study materials or resources they need.
                 
             </Typography>
         </CardContent>
         <CardActions>
-            <Link to = {"/live"}><Button size="small">Learn More</Button></Link>
+            <Link to = {"/user"}><Button size="small">Learn More</Button></Link>
         </CardActions>
     </React.Fragment>
 );
